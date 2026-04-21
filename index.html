@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,9 +19,6 @@
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { darkMode: 'class' };
-  </script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
@@ -59,15 +56,11 @@
 
     /* ── Fondo con patrón de puntos ── */
     .dot-pattern {
-      background-image: radial-gradient(circle, #0F1B2D 0.8px, transparent 0.8px);
+      background-image: radial-gradient(circle, #E5E7EB 0.6px, transparent 0.6px);
       background-size: 24px 24px;
-      opacity: 0.03;
+      opacity: 0.02;
       position: absolute; inset: 0;
       pointer-events: none;
-    }
-    .dark .dot-pattern {
-      background-image: radial-gradient(circle, #E5E7EB 0.6px, transparent 0.6px);
-      opacity: 0.02;
     }
 
     /* ── Glow hero ── */
@@ -75,14 +68,11 @@
       position: absolute;
       width: 500px; height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(197,48,48,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(197,48,48,0.12) 0%, transparent 70%);
       top: -150px; left: 50%;
       transform: translateX(-50%);
       pointer-events: none;
       filter: blur(60px);
-    }
-    .dark .hero-glow {
-      background: radial-gradient(circle, rgba(197,48,48,0.12) 0%, transparent 70%);
     }
 
     /* ── Animaciones scroll ── */
@@ -102,8 +92,8 @@
 
     /* ── TARJETAS SERVICIO ── */
     .card-service {
-      background: #fff;
-      border: 2px solid #D1D5DB;
+      background: #111C2E;
+      border: 2px solid #1F2937;
       border-radius: 18px;
       padding: 1.5rem;
       transition: all 0.3s ease;
@@ -112,19 +102,10 @@
       min-width: 0;
       width: 100%;
       box-sizing: border-box;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .dark .card-service {
-      background: #111C2E;
-      border: 2px solid #1F2937;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     .card-service:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-      border-color: #0F1B2D;
-    }
-    .dark .card-service:hover {
       box-shadow: 0 12px 32px rgba(0,0,0,0.45);
       border-color: #C53030;
     }
@@ -133,13 +114,10 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 4px;
-      background: linear-gradient(90deg, #0F1B2D, #C53030);
+      background: linear-gradient(90deg, #4a6fa5, #C53030);
       opacity: 0;
       transition: opacity 0.3s ease;
       border-radius: 16px 16px 0 0;
-    }
-    .dark .card-service::before {
-      background: linear-gradient(90deg, #4a6fa5, #C53030);
     }
     .card-service:hover::before { opacity: 1; }
 
@@ -147,13 +125,13 @@
     .service-icon {
       width: 44px;
       height: 44px;
-      background: #F4F6F8;
-      border: 2px solid #E5E7EB;
+      background: rgba(255,255,255,0.06);
+      border: 2px solid rgba(255,255,255,0.12);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #0F1B2D;
+      color: #E5E7EB;
       font-size: 1.1rem;
       margin-bottom: 1rem;
       transition: all 0.3s ease;
@@ -163,17 +141,7 @@
       display: block;
       line-height: 1;
     }
-    .dark .service-icon {
-      background: rgba(255,255,255,0.06);
-      border-color: rgba(255,255,255,0.12);
-      color: #E5E7EB;
-    }
     .card-service:hover .service-icon {
-      background: #0F1B2D;
-      color: #fff;
-      border-color: #0F1B2D;
-    }
-    .dark .card-service:hover .service-icon {
       background: #C53030;
       color: #fff;
       border-color: #C53030;
@@ -181,34 +149,25 @@
 
     /* ── Steps ── */
     .step-card {
-      background: #fff;
-      border: 2px solid #D1D5DB;
+      background: #111C2E;
+      border: 2px solid #1F2937;
       border-radius: 18px;
       padding: 1.75rem 1.25rem;
       text-align: center;
       position: relative;
       transition: all 0.3s ease;
       min-width: 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .dark .step-card {
-      background: #111C2E;
-      border-color: #1F2937;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     .step-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      border-color: #0F1B2D;
-    }
-    .dark .step-card:hover {
       box-shadow: 0 8px 24px rgba(0,0,0,0.35);
       border-color: #C53030;
     }
     .step-number {
       width: 46px;
       height: 46px;
-      background: #0F1B2D;
+      background: #C53030;
       color: #fff;
       border-radius: 13px;
       display: flex;
@@ -218,7 +177,6 @@
       font-weight: 700;
       margin: 0 auto 1.1rem;
     }
-    .dark .step-number { background: #C53030; }
 
     /* ── Connector ── */
     .step-connector { display: none; }
@@ -229,30 +187,20 @@
         top: 23px; right: -26px;
         width: 52px; height: 2px;
         background: repeating-linear-gradient(
-          90deg, #D1D5DB, #D1D5DB 4px,
-          transparent 4px, transparent 8px
-        );
-        z-index: 1;
-      }
-      .dark .step-connector {
-        background: repeating-linear-gradient(
           90deg, #1F2937, #1F2937 4px,
           transparent 4px, transparent 8px
         );
+        z-index: 1;
       }
     }
 
     /* ── Payment Banner ── */
     .payment-banner {
-      background: #0F1B2D;
+      background: #111C2E;
       border-radius: 20px;
       padding: 2rem;
       position: relative;
       overflow: hidden;
-      border: 2px solid #1F2937;
-    }
-    .dark .payment-banner {
-      background: #111C2E;
       border: 2px solid #1F2937;
     }
     .payment-banner::after {
@@ -270,10 +218,9 @@
     .stat-number {
       font-size: 2.25rem;
       font-weight: 700;
-      color: #0F1B2D;
+      color: #fff;
       line-height: 1;
     }
-    .dark .stat-number { color: #fff; }
 
     /* ── Floating WhatsApp ── */
     .float-wa {
@@ -298,14 +245,13 @@
 
     /* ── Navbar links ── */
     .nav-link {
-      color: #6B7280;
+      color: #9CA3AF;
       font-weight: 500;
       font-size: 0.875rem;
       transition: color 0.2s;
       white-space: nowrap;
     }
-    .nav-link:hover { color: #0F1B2D; }
-    .dark .nav-link:hover { color: #E5E7EB; }
+    .nav-link:hover { color: #E5E7EB; }
 
     /* ── Badge ── */
     .badge {
@@ -322,29 +268,8 @@
 
     /* ── Guarantee bg ── */
     .guarantee-bg {
-      background: linear-gradient(180deg, #F4F6F8 0%, #EBEEF2 100%);
-    }
-    .dark .guarantee-bg {
       background: linear-gradient(180deg, #0B1220 0%, #0F1B2D 100%);
     }
-
-    /* ── Theme btn ── */
-    .theme-btn {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      cursor: pointer;
-      border: none;
-      background: transparent;
-      color: #6B7280;
-      transition: background 0.2s;
-      flex-shrink: 0;
-    }
-    .theme-btn:hover { background: rgba(0,0,0,0.05); }
-    .dark .theme-btn:hover { background: rgba(255,255,255,0.08); }
 
     /* ── MOBILE GRID FIX ── */
     .services-grid {
@@ -432,7 +357,7 @@
   </style>
 </head>
 
-<body class="bg-[#F4F6F8] dark:bg-[#0B1220] text-[#1F2937] dark:text-[#E5E7EB] antialiased">
+<body class="bg-[#0B1220] text-[#E5E7EB] antialiased">
 
   <!-- ══════ FLOATING WHATSAPP ══════ -->
   <a href="https://wa.me/5353572432?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20agendamiento%20de%20citas."
@@ -442,12 +367,12 @@
   </a>
 
   <!-- ══════ NAVBAR ══════ -->
-  <header class="bg-white/80 dark:bg-[#0B1220]/80 backdrop-blur-xl sticky top-0 z-50 border-b border-black/5 dark:border-white/5">
+  <header class="bg-[#0B1220]/80 backdrop-blur-xl sticky top-0 z-50 border-b border-white/5">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center h-16 sm:h-[72px]">
 
         <a href="https://turna-habana.github.io/turnahabana/" class="flex items-center gap-2 flex-shrink-0">
-          <span class="text-xl sm:text-[22px] f-semibold text-[#0F1B2D] dark:text-white" style="letter-spacing:-0.02em;">Turna</span>
+          <span class="text-xl sm:text-[22px] f-semibold text-white" style="letter-spacing:-0.02em;">Turna</span>
           <span class="punto-turna" style="width:6px;height:6px;min-width:6px;animation:none;"></span>
         </a>
 
@@ -456,13 +381,9 @@
           <a href="#servicios" class="nav-link hidden md:inline">Servicios</a>
           <a href="#garantia" class="nav-link hidden md:inline">Garantía</a>
 
-          <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
-            <i id="theme-icon" class="fa-solid fa-sun text-base"></i>
-          </button>
-
           <a href="https://wa.me/5353572432?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20agendamiento%20de%20citas."
              target="_blank" rel="noopener noreferrer"
-             class="bg-[#0F1B2D] dark:bg-white dark:text-[#0F1B2D] text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl flex items-center gap-2 f-medium text-sm hover:opacity-90 active:scale-95 transition-all flex-shrink-0">
+             class="bg-white text-[#0F1B2D] px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl flex items-center gap-2 f-medium text-sm hover:opacity-90 active:scale-95 transition-all flex-shrink-0">
             <i class="fa-brands fa-whatsapp text-base"></i>
             <span class="hidden sm:inline">Contactar</span>
           </a>
@@ -481,34 +402,34 @@
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
 
-        <div class="badge bg-[#0F1B2D]/5 dark:bg-white/5 text-[#C53030] mb-7 reveal">
+        <div class="badge bg-white/5 text-[#C53030] mb-7 reveal">
           <span class="punto-turna" style="width:6px;height:6px;min-width:6px;"></span>
           <span>La Habana · Servicio Independiente</span>
         </div>
 
-        <h1 class="f-bold text-[#0F1B2D] dark:text-white text-[2.2rem] sm:text-[2.8rem] md:text-[3.5rem] reveal reveal-delay-1" style="line-height:1.1;">
+        <h1 class="f-bold text-white text-[2.2rem] sm:text-[2.8rem] md:text-[3.5rem] reveal reveal-delay-1" style="line-height:1.1;">
           Gestionamos tu cita en el Consulado General de España
         </h1>
 
-        <p class="f-regular text-base sm:text-lg md:text-xl text-[#6B7280] max-w-xl mx-auto mt-5 reveal reveal-delay-2" style="line-height:1.6;">
+        <p class="f-regular text-base sm:text-lg md:text-xl text-[#9CA3AF] max-w-xl mx-auto mt-5 reveal reveal-delay-2" style="line-height:1.6;">
           Servicio premium independiente que te ofrece claridad y seguimiento en un proceso consular complejo.
         </p>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center reveal reveal-delay-3">
           <a href="https://wa.me/5353572432?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20agendamiento%20de%20citas."
              target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center justify-center gap-3 bg-[#0F1B2D] dark:bg-white dark:text-[#0F1B2D] text-white text-base f-semibold px-7 py-3.5 rounded-2xl hover:opacity-90 active:scale-95 transition-all w-full sm:w-auto">
+             class="inline-flex items-center justify-center gap-3 bg-white text-[#0F1B2D] text-base f-semibold px-7 py-3.5 rounded-2xl hover:opacity-90 active:scale-95 transition-all w-full sm:w-auto">
             <i class="fa-brands fa-whatsapp text-xl"></i>
             <span>Iniciar por WhatsApp</span>
           </a>
           <a href="#servicios"
-             class="inline-flex items-center justify-center gap-2 border-2 border-[#0F1B2D]/15 dark:border-white/15 text-[#0F1B2D] dark:text-white text-base f-medium px-7 py-3.5 rounded-2xl hover:border-[#0F1B2D]/30 dark:hover:border-white/30 transition-all w-full sm:w-auto">
+             class="inline-flex items-center justify-center gap-2 border-2 border-white/15 text-white text-base f-medium px-7 py-3.5 rounded-2xl hover:border-white/30 transition-all w-full sm:w-auto">
             <span>Ver servicios y precios</span>
             <i class="fa-solid fa-arrow-down text-sm"></i>
           </a>
         </div>
 
-        <p class="text-xs sm:text-sm text-[#6B7280] mt-6 f-regular reveal reveal-delay-4">
+        <p class="text-xs sm:text-sm text-[#9CA3AF] mt-6 f-regular reveal reveal-delay-4">
           Solo agendamos citas · No solicitamos credenciales oficiales
         </p>
 
@@ -516,22 +437,22 @@
     </section>
 
     <!-- ══════ STATS ══════ -->
-    <section class="py-10 border-y border-black/5 dark:border-white/5 bg-white dark:bg-[#111C2E]">
+    <section class="py-10 border-y border-white/5 bg-[#111C2E]">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
         <div class="stats-grid">
           <div class="text-center py-3 reveal">
             <p class="stat-number">9</p>
-            <p class="text-xs sm:text-sm f-medium text-[#6B7280] mt-1.5">Trámites disponibles</p>
+            <p class="text-xs sm:text-sm f-medium text-[#9CA3AF] mt-1.5">Trámites disponibles</p>
           </div>
           <div class="text-center py-3 reveal reveal-delay-1">
             <p class="stat-number">24h</p>
-            <p class="text-xs sm:text-sm f-medium text-[#6B7280] mt-1.5">Respuesta promedio</p>
+            <p class="text-xs sm:text-sm f-medium text-[#9CA3AF] mt-1.5">Respuesta promedio</p>
           </div>
           <div class="text-center py-3 reveal reveal-delay-2">
             <p class="stat-number flex items-center justify-center">
               100<span class="text-[#C53030] text-xl sm:text-2xl">%</span>
             </p>
-            <p class="text-xs sm:text-sm f-medium text-[#6B7280] mt-1.5">Transparente</p>
+            <p class="text-xs sm:text-sm f-medium text-[#9CA3AF] mt-1.5">Transparente</p>
           </div>
         </div>
       </div>
@@ -543,14 +464,14 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
 
         <div class="text-center mb-10 sm:mb-14">
-          <div class="badge bg-[#0F1B2D]/5 dark:bg-white/5 text-[#0F1B2D] dark:text-white mb-4 reveal">
+          <div class="badge bg-white/5 text-white mb-4 reveal">
             <i class="fa-solid fa-route text-xs"></i>
             <span>Proceso</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl f-semibold text-[#0F1B2D] dark:text-white reveal reveal-delay-1" style="line-height:1.1;">
+          <h2 class="text-3xl sm:text-4xl f-semibold text-white reveal reveal-delay-1" style="line-height:1.1;">
             Un proceso claro y estructurado
           </h2>
-          <p class="mt-3 text-base sm:text-lg text-[#6B7280] f-regular reveal reveal-delay-2">
+          <p class="mt-3 text-base sm:text-lg text-[#9CA3AF] f-regular reveal reveal-delay-2">
             En 4 pasos, tu cita estará gestionada.
           </p>
         </div>
@@ -559,31 +480,31 @@
           <div class="step-card reveal reveal-delay-1">
             <div class="step-connector"></div>
             <div class="step-number">1</div>
-            <h3 class="f-semibold text-base sm:text-lg mb-2 text-[#0F1B2D] dark:text-white">Contacto inicial</h3>
-            <p class="text-sm text-[#6B7280] f-regular leading-relaxed">
+            <h3 class="f-semibold text-base sm:text-lg mb-2 text-white">Contacto inicial</h3>
+            <p class="text-sm text-[#9CA3AF] f-regular leading-relaxed">
               Nos escribes por WhatsApp indicando el trámite que necesitas agendar.
             </p>
           </div>
           <div class="step-card reveal reveal-delay-2">
             <div class="step-connector"></div>
             <div class="step-number">2</div>
-            <h3 class="f-semibold text-base sm:text-lg mb-2 text-[#0F1B2D] dark:text-white">Verificación</h3>
-            <p class="text-sm text-[#6B7280] f-regular leading-relaxed">
+            <h3 class="f-semibold text-base sm:text-lg mb-2 text-white">Verificación</h3>
+            <p class="text-sm text-[#9CA3AF] f-regular leading-relaxed">
               Revisamos la información y confirmamos que todo está correcto.
             </p>
           </div>
           <div class="step-card reveal reveal-delay-3">
             <div class="step-connector"></div>
             <div class="step-number">3</div>
-            <h3 class="f-semibold text-base sm:text-lg mb-2 text-[#0F1B2D] dark:text-white">Agenda</h3>
-            <p class="text-sm text-[#6B7280] f-regular leading-relaxed">
+            <h3 class="f-semibold text-base sm:text-lg mb-2 text-white">Agenda</h3>
+            <p class="text-sm text-[#9CA3AF] f-regular leading-relaxed">
               Gestionamos tu cita y te enviamos captura y justificante PDF.
             </p>
           </div>
           <div class="step-card reveal reveal-delay-4">
             <div class="step-number">4</div>
-            <h3 class="f-semibold text-base sm:text-lg mb-2 text-[#0F1B2D] dark:text-white">Pago al confirmar</h3>
-            <p class="text-sm text-[#6B7280] f-regular leading-relaxed">
+            <h3 class="f-semibold text-base sm:text-lg mb-2 text-white">Pago al confirmar</h3>
+            <p class="text-sm text-[#9CA3AF] f-regular leading-relaxed">
               Solo cuando compruebes tu cita, procedes al pago por transferencia.
             </p>
           </div>
@@ -593,18 +514,18 @@
     </section>
 
     <!-- ══════ SERVICIOS Y PRECIOS ══════ -->
-    <section id="servicios" class="py-16 sm:py-24 bg-white dark:bg-[#0F1B2D]">
+    <section id="servicios" class="py-16 sm:py-24 bg-[#0F1B2D]">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div class="text-center mb-10 sm:mb-14">
-          <div class="badge bg-[#0F1B2D]/5 dark:bg-white/5 text-[#0F1B2D] dark:text-white mb-4 reveal">
+          <div class="badge bg-white/5 text-white mb-4 reveal">
             <i class="fa-solid fa-tag text-xs"></i>
             <span>Tarifas</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl f-semibold text-[#0F1B2D] dark:text-white reveal reveal-delay-1" style="line-height:1.1;">
+          <h2 class="text-3xl sm:text-4xl f-semibold text-white reveal reveal-delay-1" style="line-height:1.1;">
             Servicios y precios
           </h2>
-          <p class="mt-3 text-base sm:text-lg text-[#6B7280] f-regular reveal reveal-delay-2">
+          <p class="mt-3 text-base sm:text-lg text-[#9CA3AF] f-regular reveal reveal-delay-2">
             Precios transparentes para cada tipo de trámite.
           </p>
         </div>
@@ -613,82 +534,82 @@
 
           <div class="card-service reveal reveal-delay-1">
             <div class="service-icon"><i class="fa-solid fa-stamp"></i></div>
-            <p class="f-medium text-sm sm:text-base text-[#0F1B2D] dark:text-white">Legalización de Documentos</p>
-            <p class="mt-2 price-amount text-3xl f-bold text-[#0F1B2D] dark:text-white">
-              5,000 <span class="text-sm f-medium text-[#6B7280]">CUP</span>
+            <p class="f-medium text-sm sm:text-base text-white">Legalización de Documentos</p>
+            <p class="mt-2 price-amount text-3xl f-bold text-white">
+              6,000 <span class="text-sm f-medium text-[#9CA3AF]">CUP</span>
             </p>
           </div>
 
           <div class="card-service reveal reveal-delay-2">
             <div class="service-icon"><i class="fa-solid fa-ring"></i></div>
-            <p class="f-medium text-sm sm:text-base text-[#0F1B2D] dark:text-white">Certificado de Matrimonio</p>
-            <p class="mt-2 price-amount text-3xl f-bold text-[#0F1B2D] dark:text-white">
-              5,000 <span class="text-sm f-medium text-[#6B7280]">CUP</span>
+            <p class="f-medium text-sm sm:text-base text-white">Certificado de Matrimonio</p>
+            <p class="mt-2 price-amount text-3xl f-bold text-white">
+              5,000 <span class="text-sm f-medium text-[#9CA3AF]">CUP</span>
             </p>
           </div>
 
           <div class="card-service reveal reveal-delay-3">
             <div class="service-icon"><i class="fa-solid fa-users"></i></div>
-            <p class="f-medium text-sm sm:text-base text-[#0F1B2D] dark:text-white">Visado de Familiar Comunitario</p>
-            <p class="mt-2 price-amount text-3xl f-bold text-[#0F1B2D] dark:text-white">
-              1,500 <span class="text-sm f-medium text-[#6B7280]">CUP</span>
+            <p class="f-medium text-sm sm:text-base text-white">Visado de Familiar Comunitario</p>
+            <p class="mt-2 price-amount text-3xl f-bold text-white">
+              1,500 <span class="text-sm f-medium text-[#9CA3AF]">CUP</span>
             </p>
           </div>
 
           <div class="card-service reveal reveal-delay-1">
             <div class="service-icon"><i class="fa-solid fa-passport"></i></div>
-            <p class="f-medium text-sm sm:text-base text-[#0F1B2D] dark:text-white">
+            <p class="f-medium text-sm sm:text-base text-white">
               Primer Pasaporte
-              <span class="block text-xs f-regular text-[#6B7280] mt-0.5">Disponible hasta enero 2026</span>
+              <span class="block text-xs f-regular text-[#9CA3AF] mt-0.5">Disponible hasta enero 2026</span>
             </p>
-            <p class="mt-2 price-amount text-3xl f-bold text-[#0F1B2D] dark:text-white">
-              1,500 <span class="text-sm f-medium text-[#6B7280]">CUP</span>
+            <p class="mt-2 price-amount text-3xl f-bold text-white">
+              1,500 <span class="text-sm f-medium text-[#9CA3AF]">CUP</span>
             </p>
           </div>
 
           <div class="card-service reveal reveal-delay-2">
             <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
-            <p class="f-medium text-sm sm:text-base text-[#0F1B2D] dark:text-white">
+            <p class="f-medium text-sm sm:text-base text-white">
               Literal de Nacimiento
-              <span class="block text-xs f-regular text-[#6B7280] mt-0.5">Normal y para DNI</span>
+              <span class="block text-xs f-regular text-[#9CA3AF] mt-0.5">Normal y para DNI</span>
             </p>
-            <p class="mt-2 price-amount text-3xl f-bold text-[#0F1B2D] dark:text-white">
-              1,500 <span class="text-sm f-medium text-[#6B7280]">CUP</span>
+            <p class="mt-2 price-amount text-3xl f-bold text-white">
+              1,500 <span class="text-sm f-medium text-[#9CA3AF]">CUP</span>
             </p>
           </div>
 
           <div class="card-service reveal reveal-delay-3">
             <div class="service-icon"><i class="fa-solid fa-id-card"></i></div>
-            <p class="f-medium text-sm sm:text-base text-[#0F1B2D] dark:text-white">Visado de Residencia</p>
-            <p class="mt-2 price-amount text-3xl f-bold text-[#0F1B2D] dark:text-white">
-              1,000 <span class="text-sm f-medium text-[#6B7280]">CUP</span>
+            <p class="f-medium text-sm sm:text-base text-white">Visado de Residencia</p>
+            <p class="mt-2 price-amount text-3xl f-bold text-white">
+              1,000 <span class="text-sm f-medium text-[#9CA3AF]">CUP</span>
             </p>
           </div>
 
           <div class="card-service reveal reveal-delay-1">
             <div class="service-icon"><i class="fa-solid fa-file-lines"></i></div>
-            <p class="f-medium text-sm sm:text-base text-[#0F1B2D] dark:text-white">LMD</p>
-            <p class="mt-2 price-amount text-3xl f-bold text-[#0F1B2D] dark:text-white">
-              1,000 <span class="text-sm f-medium text-[#6B7280]">CUP</span>
+            <p class="f-medium text-sm sm:text-base text-white">LMD</p>
+            <p class="mt-2 price-amount text-3xl f-bold text-white">
+              1,000 <span class="text-sm f-medium text-[#9CA3AF]">CUP</span>
             </p>
           </div>
 
           <div class="card-service reveal reveal-delay-2">
             <div class="service-icon"><i class="fa-solid fa-heart"></i></div>
-            <p class="f-medium text-sm sm:text-base text-[#0F1B2D] dark:text-white">Inscripción de Matrimonio</p>
-            <p class="mt-2 price-amount text-3xl f-bold text-[#0F1B2D] dark:text-white">
-              1,000 <span class="text-sm f-medium text-[#6B7280]">CUP</span>
+            <p class="f-medium text-sm sm:text-base text-white">Inscripción de Matrimonio</p>
+            <p class="mt-2 price-amount text-3xl f-bold text-white">
+              1,000 <span class="text-sm f-medium text-[#9CA3AF]">CUP</span>
             </p>
           </div>
 
           <div class="card-service reveal reveal-delay-3">
             <div class="service-icon"><i class="fa-solid fa-child"></i></div>
-            <p class="f-medium text-sm sm:text-base text-[#0F1B2D] dark:text-white">
+            <p class="f-medium text-sm sm:text-base text-white">
               Inscripción de Menores
-              <span class="block text-xs f-regular text-[#6B7280] mt-0.5">Precio por cada menor</span>
+              <span class="block text-xs f-regular text-[#9CA3AF] mt-0.5">Precio por cada menor</span>
             </p>
-            <p class="mt-2 price-amount text-3xl f-bold text-[#0F1B2D] dark:text-white">
-              1,000 <span class="text-sm f-medium text-[#6B7280]">CUP</span>
+            <p class="mt-2 price-amount text-3xl f-bold text-white">
+              1,000 <span class="text-sm f-medium text-[#9CA3AF]">CUP</span>
             </p>
           </div>
 
@@ -698,7 +619,6 @@
         <div class="payment-banner mt-10 reveal">
           <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 relative z-10">
             <div class="flex-shrink-0">
-              <!-- ✅ ICONO CORREGIDO: justify-center (Tailwind) -->
               <div class="w-14 h-14 bg-[#C53030] rounded-2xl flex items-center justify-center">
                 <i class="fa-solid fa-shield-halved text-white text-2xl"></i>
               </div>
@@ -726,32 +646,32 @@
           <span>Confianza antes que todo</span>
         </div>
 
-        <h2 class="text-3xl sm:text-4xl f-semibold text-[#0F1B2D] dark:text-white mb-5 reveal reveal-delay-1" style="line-height:1.1;">
+        <h2 class="text-3xl sm:text-4xl f-semibold text-white mb-5 reveal reveal-delay-1" style="line-height:1.1;">
           Pagas solo cuando compruebes tu cita.
         </h2>
 
-        <p class="text-base sm:text-lg text-[#6B7280] f-regular reveal reveal-delay-2" style="line-height:1.6;">
+        <p class="text-base sm:text-lg text-[#9CA3AF] f-regular reveal reveal-delay-2" style="line-height:1.6;">
           Te mostramos evidencia real de que tu cita fue agendada en la plataforma oficial —captura de pantalla y justificante PDF— antes de que realices cualquier pago.
         </p>
 
         <div class="mt-8 grid grid-cols-3 gap-3 sm:gap-6 reveal reveal-delay-3">
           <div class="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-5">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#0F1B2D]/5 dark:bg-white/5 flex items-center justify-center text-[#0F1B2D] dark:text-white">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 flex items-center justify-center text-white">
               <i class="fa-solid fa-camera text-base sm:text-lg"></i>
             </div>
-            <p class="text-xs sm:text-sm f-medium text-[#0F1B2D] dark:text-white text-center">Captura de pantalla</p>
+            <p class="text-xs sm:text-sm f-medium text-white text-center">Captura de pantalla</p>
           </div>
           <div class="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-5">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#0F1B2D]/5 dark:bg-white/5 flex items-center justify-center text-[#0F1B2D] dark:text-white">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 flex items-center justify-center text-white">
               <i class="fa-solid fa-file-pdf text-base sm:text-lg"></i>
             </div>
-            <p class="text-xs sm:text-sm f-medium text-[#0F1B2D] dark:text-white text-center">Justificante en PDF</p>
+            <p class="text-xs sm:text-sm f-medium text-white text-center">Justificante en PDF</p>
           </div>
           <div class="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-5">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#0F1B2D]/5 dark:bg-white/5 flex items-center justify-center text-[#0F1B2D] dark:text-white">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 flex items-center justify-center text-white">
               <i class="fa-solid fa-envelope text-base sm:text-lg"></i>
             </div>
-            <p class="text-xs sm:text-sm f-medium text-[#0F1B2D] dark:text-white text-center">Notificación Consulado</p>
+            <p class="text-xs sm:text-sm f-medium text-white text-center">Notificación Consulado</p>
           </div>
         </div>
 
@@ -759,9 +679,9 @@
     </section>
 
     <!-- ══════ CTA FINAL ══════ -->
-    <section class="py-16 sm:py-24 bg-white dark:bg-[#0F1B2D]">
+    <section class="py-16 sm:py-24 bg-[#0F1B2D]">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="bg-[#0F1B2D] dark:bg-[#111C2E] rounded-3xl px-6 sm:px-12 md:px-16 py-12 sm:py-16 md:py-20 text-center text-white relative overflow-hidden reveal border-2 border-[#1F2937]">
+        <div class="bg-[#111C2E] rounded-3xl px-6 sm:px-12 md:px-16 py-12 sm:py-16 md:py-20 text-center text-white relative overflow-hidden reveal border-2 border-[#1F2937]">
 
           <div class="absolute -top-16 -left-16 w-36 h-36 bg-[#C53030]/10 rounded-full blur-3xl pointer-events-none"></div>
           <div class="absolute -bottom-16 -right-16 w-48 h-48 bg-[#C53030]/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -788,58 +708,31 @@
   </main>
 
   <!-- ══════ FOOTER ══════ -->
-  <footer class="border-t border-black/5 dark:border-white/5 bg-[#F4F6F8] dark:bg-[#0B1220]">
+  <footer class="border-t border-white/5 bg-[#0B1220]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
 
       <div class="flex items-center justify-center gap-2 mb-4">
-        <span class="text-lg sm:text-xl f-semibold text-[#0F1B2D] dark:text-white" style="letter-spacing:-0.02em;">Turna</span>
+        <span class="text-lg sm:text-xl f-semibold text-white" style="letter-spacing:-0.02em;">Turna</span>
         <span class="punto-turna" style="width:5px;height:5px;min-width:5px;animation:none;"></span>
       </div>
 
-      <p class="text-xs sm:text-sm f-regular text-[#6B7280] max-w-2xl mx-auto leading-relaxed">
-        <strong class="text-[#1F2937] dark:text-[#E5E7EB] f-medium">Aviso legal:</strong>
+      <p class="text-xs sm:text-sm f-regular text-[#9CA3AF] max-w-2xl mx-auto leading-relaxed">
+        <strong class="text-[#E5E7EB] f-medium">Aviso legal:</strong>
         Turna es un servicio privado independiente del Consulado General de España.
         No somos una entidad oficial ni estamos afiliados a organismos gubernamentales.
         Nuestro servicio consiste exclusivamente en la gestión de citas mediante la plataforma consular.
       </p>
 
-      <p class="text-xs text-[#6B7280]/50 mt-6 f-regular">
+      <p class="text-xs text-[#9CA3AF]/50 mt-6 f-regular">
         © 2025 Turna · turna-habana.github.io/turnahabana · Todos los derechos reservados.
       </p>
 
     </div>
   </footer>
 
-  <!-- ══════ JAVASCRIPT ══════ -->
+  <!-- ══════ SCROLL REVEAL ══════ -->
   <script>
     (function () {
-
-      /* ── Theme Toggle ── */
-      var toggle = document.getElementById('theme-toggle');
-      var icon   = document.getElementById('theme-icon');
-      var root   = document.documentElement;
-
-      function setTheme(t) {
-        if (t === 'dark') {
-          root.classList.add('dark');
-          icon.className = 'fa-solid fa-sun text-base';
-        } else {
-          root.classList.remove('dark');
-          icon.className = 'fa-solid fa-moon text-base';
-        }
-        try { localStorage.setItem('turna-theme', t); } catch(e){}
-      }
-
-      var saved = null;
-      try { saved = localStorage.getItem('turna-theme'); } catch(e){}
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(saved || (prefersDark ? 'dark' : 'light'));
-
-      toggle.addEventListener('click', function () {
-        setTheme(root.classList.contains('dark') ? 'light' : 'dark');
-      });
-
-      /* ── Scroll Reveal ── */
       var reveals = document.querySelectorAll('.reveal');
       if ('IntersectionObserver' in window) {
         var observer = new IntersectionObserver(function (entries) {
@@ -854,7 +747,6 @@
       } else {
         reveals.forEach(function (el) { el.classList.add('visible'); });
       }
-
     })();
   </script>
 
