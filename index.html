@@ -100,7 +100,7 @@
     .reveal-delay-3 { transition-delay: 0.24s; }
     .reveal-delay-4 { transition-delay: 0.32s; }
 
-    /* ── TARJETAS SERVICIO MEJORADAS ── */
+    /* ── TARJETAS SERVICIO ── */
     .card-service {
       background: #fff;
       border: 2px solid #D1D5DB;
@@ -119,7 +119,6 @@
       border: 2px solid #1F2937;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
-    
     .card-service:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 32px rgba(0,0,0,0.12);
@@ -129,7 +128,6 @@
       box-shadow: 0 12px 32px rgba(0,0,0,0.45);
       border-color: #C53030;
     }
-
     .card-service::before {
       content: '';
       position: absolute;
@@ -145,7 +143,7 @@
     }
     .card-service:hover::before { opacity: 1; }
 
-    /* ── ICONO SERVICIO (CORREGIDO) ── */
+    /* ── ICONO SERVICIO ── */
     .service-icon {
       width: 44px;
       height: 44px;
@@ -248,7 +246,7 @@
     .payment-banner {
       background: #0F1B2D;
       border-radius: 20px;
-      padding: 2rem 2rem;
+      padding: 2rem;
       position: relative;
       overflow: hidden;
       border: 2px solid #1F2937;
@@ -268,7 +266,7 @@
       pointer-events: none;
     }
 
-    /* ── Stats ─ */
+    /* ── Stats ── */
     .stat-number {
       font-size: 2.25rem;
       font-weight: 700;
@@ -309,7 +307,7 @@
     .nav-link:hover { color: #0F1B2D; }
     .dark .nav-link:hover { color: #E5E7EB; }
 
-    /* ── Badge ─ */
+    /* ── Badge ── */
     .badge {
       display: inline-flex;
       align-items: center;
@@ -399,6 +397,39 @@
     /* ── Pricing label mobile ── */
     @media (max-width: 559px) {
       .price-amount { font-size: 1.75rem; }
+    }
+
+    /* ── Botón CTA final ── */
+    .cta-wa-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      background: #fff;
+      color: #0F1B2D;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 1.1rem 2.5rem;
+      border-radius: 18px;
+      transition: all 0.2s ease;
+      letter-spacing: -0.01em;
+    }
+    .cta-wa-btn:hover {
+      background: #f3f4f6;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .cta-wa-btn:active { transform: scale(0.97); }
+    .cta-wa-btn i {
+      font-size: 1.75rem;
+    }
+    @media (max-width: 559px) {
+      .cta-wa-btn {
+        font-size: 1.05rem;
+        padding: 1rem 1.75rem;
+        gap: 10px;
+      }
+      .cta-wa-btn i { font-size: 1.4rem; }
     }
   </style>
 </head>
@@ -582,7 +613,6 @@
 
         <div class="services-grid">
 
-          <!-- ✅ CAMBIO APLICADO: Precio 6,000 y Documentos con D mayúscula -->
           <div class="card-service reveal reveal-delay-1">
             <div class="service-icon"><i class="fa-solid fa-stamp"></i></div>
             <p class="f-medium text-sm sm:text-base text-[#0F1B2D] dark:text-white">Legalización de Documentos</p>
@@ -741,15 +771,18 @@
             <h2 class="text-2xl sm:text-3xl md:text-4xl f-semibold mb-4" style="line-height:1.15;">
               ¿Listo para agendar tu cita sin complicaciones?
             </h2>
-            <p class="text-sm sm:text-base md:text-lg text-gray-300 f-regular max-w-lg mx-auto mb-8" style="line-height:1.6;">
+            <p class="text-sm sm:text-base md:text-lg text-gray-300 f-regular max-w-lg mx-auto mb-10" style="line-height:1.6;">
               Contáctanos ahora. Nuestro equipo te asistirá de manera profesional, clara y eficiente.
             </p>
+
+            <!-- ✅ BOTÓN ACTUALIZADO: solo texto, sin número, tamaño llamativo -->
             <a href="https://wa.me/5353572432?text=Hola%2C%20estoy%20listo%20para%20agendar%20mi%20cita."
                target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-3 bg-white text-[#0F1B2D] text-sm sm:text-base f-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl hover:bg-gray-100 active:scale-95 transition-all">
-              <i class="fa-brands fa-whatsapp text-xl"></i>
-              <span>Escribir por WhatsApp · +53 5357 2432</span>
+               class="cta-wa-btn">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Escribir por WhatsApp</span>
             </a>
+
           </div>
 
         </div>
