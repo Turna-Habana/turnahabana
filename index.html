@@ -208,14 +208,16 @@
       border-color: #C53030;
     }
     .step-number {
-      width: 46px; height: 46px;
+      width: 46px;
+      height: 46px;
       background: #0F1B2D;
       color: #fff;
       border-radius: 13px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem; font-weight: 700;
+      font-size: 1.2rem;
+      font-weight: 700;
       margin: 0 auto 1.1rem;
     }
     .dark .step-number { background: #C53030; }
@@ -330,12 +332,14 @@
 
     /* ── Theme btn ── */
     .theme-btn {
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 10px;
-      cursor: pointer; border: none;
+      cursor: pointer;
+      border: none;
       background: transparent;
       color: #6B7280;
       transition: background 0.2s;
@@ -743,7 +747,10 @@
                target="_blank" rel="noopener noreferrer"
                class="inline-flex items-center justify-center gap-3 bg-white text-[#0F1B2D] text-sm sm:text-base f-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl hover:bg-gray-100 active:scale-95 transition-all">
               <i class="fa-brands fa-whatsapp text-xl"></i>
-              <span>Escribir por WhatsApp · +53 5357 2432</span>
+              <span class="flex flex-col items-center leading-tight">
+                <span>Escribir por WhatsApp</span>
+                <span class="text-sm f-medium opacity-80">+53 5357 2432</span>
+              </span>
             </a>
           </div>
 
