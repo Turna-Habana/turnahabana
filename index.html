@@ -572,8 +572,6 @@
               Revisamos la información y confirmamos que todo está correcto.
             </p>
           </div>
-
-          <!-- ✅ CAMBIO APLICADO: "Agendamiento" → "Agenda" -->
           <div class="step-card reveal reveal-delay-3">
             <div class="step-connector"></div>
             <div class="step-number">3</div>
@@ -582,7 +580,6 @@
               Gestionamos tu cita y te enviamos captura y justificante PDF.
             </p>
           </div>
-
           <div class="step-card reveal reveal-delay-4">
             <div class="step-number">4</div>
             <h3 class="f-semibold text-base sm:text-lg mb-2 text-[#0F1B2D] dark:text-white">Pago al confirmar</h3>
@@ -701,7 +698,8 @@
         <div class="payment-banner mt-10 reveal">
           <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 relative z-10">
             <div class="flex-shrink-0">
-              <div class="w-14 h-14 bg-[#C53030] rounded-2xl flex items-center justify-content: center;">
+              <!-- ✅ ICONO CORREGIDO: justify-center (Tailwind) -->
+              <div class="w-14 h-14 bg-[#C53030] rounded-2xl flex items-center justify-center">
                 <i class="fa-solid fa-shield-halved text-white text-2xl"></i>
               </div>
             </div>
