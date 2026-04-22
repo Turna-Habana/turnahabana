@@ -37,7 +37,7 @@
   <style>
     html { font-family: 'Satoshi', sans-serif; scroll-behavior: smooth; }
     body { overflow-x: hidden; background-color: #0B1220; color: #E5E7EB; }
-    
+
     .f-regular { font-weight: 400; } .f-medium { font-weight: 500; }
     .f-semibold { font-weight: 600; } .f-bold { font-weight: 700; }
 
@@ -78,13 +78,12 @@
     @media (min-width: 768px) {
       .step-connector { display: block; position: absolute; top: 23px; right: -26px; width: 52px; height: 2px; background: repeating-linear-gradient(90deg, #1F2937, #1F2937 4px, transparent 4px, transparent 8px); z-index: 1; }
     }
-    .payment-banner { background: #111C2E; border-radius: 20px; padding: 2rem; position: relative; overflow: hidden; border: 2px solid #1F2937; }
-    .payment-banner::after { content: ''; position: absolute; top: -60px; right: -60px; width: 160px; height: 160px; background: rgba(197,48,48,0.2); border-radius: 50%; filter: blur(40px); pointer-events: none; }
     .stat-number { font-size: 2.25rem; font-weight: 700; color: #fff; line-height: 1; }
     .float-wa { position: fixed; bottom: 24px; right: 20px; z-index: 200; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; box-shadow: 0 4px 20px rgba(37,211,102,0.45); border: 3px solid #fff; transition: all 0.3s ease; }
     .float-wa:hover { transform: scale(1.08); }
     .cta-wa-btn { display: inline-flex; align-items: center; justify-content: center; gap: 14px; background: #fff; color: #0F1B2D; font-weight: 700; font-size: 1.25rem; padding: 1.1rem 2.5rem; border-radius: 18px; transition: all 0.2s ease; }
     .cta-wa-btn:hover { background: #f3f4f6; transform: translateY(-2px); }
+    .guarantee-bg { background: linear-gradient(180deg, #0B1220 0%, #0F1B2D 100%); }
 
     /* Grids */
     .services-grid, .steps-grid, .stats-grid { display: grid; gap: 1rem; }
@@ -139,7 +138,7 @@
           Gestionamos tu cita en el Consulado General de España en La Habana
         </h1>
         <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto reveal reveal-delay-1">
-          Servicio premium independiente, claro y transparente. 
+          Servicio premium independiente, claro y transparente.
           <strong class="text-white">Pagas solo cuando veas tu cita confirmada.</strong>
         </p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center reveal reveal-delay-2">
@@ -197,32 +196,24 @@
             <div class="step-connector"></div>
             <div class="step-number">1</div>
             <h3 class="f-semibold text-lg mb-2">Contacto inicial</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
-              Nos escribes por WhatsApp indicando el trámite que necesitas agendar.
-            </p>
+            <p class="text-sm text-gray-400 leading-relaxed">Nos escribes por WhatsApp indicando el trámite que necesitas agendar.</p>
           </div>
           <div class="step-card p-6 text-center relative reveal reveal-delay-2">
             <div class="step-connector"></div>
             <div class="step-number">2</div>
             <h3 class="f-semibold text-lg mb-2">Verificación</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
-              Revisamos la información y confirmamos que todo está correcto.
-            </p>
+            <p class="text-sm text-gray-400 leading-relaxed">Revisamos la información y confirmamos que todo está correcto.</p>
           </div>
           <div class="step-card p-6 text-center relative reveal reveal-delay-3">
             <div class="step-connector"></div>
             <div class="step-number">3</div>
             <h3 class="f-semibold text-lg mb-2">Agenda</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
-              Gestionamos tu cita y te enviamos captura y justificante PDF.
-            </p>
+            <p class="text-sm text-gray-400 leading-relaxed">Gestionamos tu cita y te enviamos captura y justificante PDF.</p>
           </div>
           <div class="step-card p-6 text-center relative reveal reveal-delay-4">
             <div class="step-number">4</div>
             <h3 class="f-semibold text-lg mb-2">Pago al confirmar</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
-              Solo cuando compruebes tu cita, procedes al pago por transferencia.
-            </p>
+            <p class="text-sm text-gray-400 leading-relaxed">Solo cuando compruebes tu cita, procedes al pago por transferencia.</p>
           </div>
         </div>
       </div>
@@ -273,25 +264,12 @@
           </div>
         </div>
 
-        <!-- Payment Banner -->
-        <div class="payment-banner mt-10 reveal">
-          <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 relative z-10">
-            <div class="flex-shrink-0">
-              <div class="w-14 h-14 bg-[#C53030] rounded-2xl flex items-center justify-center">
-                <i class="fa-solid fa-shield-halved text-white text-2xl"></i>
-              </div>
-            </div>
-            <div class="text-center sm:text-left">
-              <p class="text-xl md:text-2xl f-bold text-white">El pago siempre es posterior a la confirmación de la cita.</p>
-              <p class="text-sm f-regular text-gray-300 mt-2">Primero agendamos, te mostramos la evidencia y solo entonces procedes al pago. Sin excepciones.</p>
-            </div>
-          </div>
-        </div>
+        <!-- (CAPTURA 1) Segmento eliminado: Payment Banner -->
 
       </div>
     </section>
 
-    <!-- Garantía -->
+    <!-- Garantía (CAPTURA 2) -->
     <section id="garantia" class="py-20 guarantee-bg">
       <div class="max-w-3xl mx-auto px-6 text-center">
 
@@ -305,8 +283,30 @@
         </h2>
 
         <p class="text-lg text-gray-400 reveal reveal-delay-2" style="line-height:1.6;">
-          Te mostramos evidencia real de que tu cita fue agendada en la plataforma oficial —captura de pantalla y justificante PDF— antes de que realices cualquier pago.
+          Te mostramos evidencia real de que tu cita fue agendada en la plataforma oficial antes de que realices cualquier pago.
         </p>
+
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal reveal-delay-3">
+          <div class="step-card p-6 text-left flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white flex-shrink-0">
+              <i class="fa-solid fa-camera text-lg"></i>
+            </div>
+            <div>
+              <p class="f-semibold text-white">Captura de Pantalla</p>
+              <p class="text-sm text-gray-400 mt-1">Evidencia visual de la cita agendada en la plataforma.</p>
+            </div>
+          </div>
+
+          <div class="step-card p-6 text-left flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white flex-shrink-0">
+              <i class="fa-solid fa-file-pdf text-lg"></i>
+            </div>
+            <div>
+              <p class="f-semibold text-white">Justificante en PDF de la Plataforma</p>
+              <p class="text-sm text-gray-400 mt-1">Documento PDF generado por la plataforma con los detalles de la cita.</p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -339,7 +339,7 @@
               <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
             </button>
             <div class="faq-content px-5 pb-5 hidden">
-              <p>Sí. Nuestro compromiso es que primero veas la evidencia de tu cita (captura y PDF) y solo entonces realices el pago.</p>
+              <p>Sí. Nuestro compromiso es que primero veas la evidencia de tu cita y solo entonces realices el pago.</p>
             </div>
           </div>
 
@@ -396,24 +396,26 @@
   <script>
     document.documentElement.classList.add('js');
 
-    // Funcion Accordion FAQ
     function toggleFaq(btn) {
       const content = btn.nextElementSibling;
       const icon = btn.querySelector('i');
       const expanded = btn.getAttribute('aria-expanded') === 'true';
-      
       btn.setAttribute('aria-expanded', !expanded);
       content.classList.toggle('hidden');
       icon.classList.toggle('rotate-180');
     }
 
-    // Animaciones Reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+      reveals.forEach(el => observer.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add('visible'));
+    }
   </script>
 </body>
 </html>
